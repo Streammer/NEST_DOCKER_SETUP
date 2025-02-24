@@ -97,4 +97,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+docker exec -it test-nest2 sh
+nodemon --watch src --exec "nest start --watch"
+
+
 docker run --name test-nest2 -p 3002:3000 --rm -v C:\Users\Dmitrij\work\nest_docker_setup:/app -v /app/node_modules server-nest:v1.0
+
+docker build -t server-nest:v1.0 .
+
+ "start:dev": "nodemon --config nodemon.json",
+"start:dev": "nest start --watch",
