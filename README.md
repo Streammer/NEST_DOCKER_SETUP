@@ -102,9 +102,9 @@ docker exec -it test-nest2 sh
 nodemon --watch src --exec "nest start --watch"
 
 
-docker run --name test-nest2 -p 3002:3000 --rm -v C:\Users\Dmitrij\work\nest_docker_setup:/app -v /app/node_modules server-nest:v1.0
+docker run --name test-nest2 -p 3002:3000 --rm -v C:\Users\Dmitrij\work\nest_docker_setup:/app -v /app/node_modules -e CHOKIDAR_USEPOLLING=true server-nest:v1.0
 
 docker build -t server-nest:v1.0 .
 
- "start:dev": "nodemon --config nodemon.json",
+"start:dev": "nodemon --config nodemon.json",
 "start:dev": "nest start --watch",
